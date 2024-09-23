@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume</title>
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2 class="form-heading"">Dynamic Resume Builder</h2>
+    <div id="resume-form">
+        <form id="resume-input-form">
+            <fieldset class="fieldset-custom">
+                <legend>Upload Profile Image</legend>
+                <label for="profile-img">Profile Image:</label>
+                <input type="file" id="profile-img" accept="image/*" required onchange="previewImage(event)">
+            </fieldset>
+
+            <fieldset class="fieldset-custom">
+                <legend>Personal Information</legend>
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required placeholder="Enter Your FullName"> 
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter Your Email">
+
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required placeholder="Enter Your Phone Number">
+
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required placeholder="Enter Your Location">
+            </fieldset>
+
+            <fieldset class="fieldset-custom">
+                <legend>Education</legend>
+                <label for="education">Enter Education Details:</label>
+                <textarea id="education" name="education" rows="3" required placeholder="Enter Your Education Details"></textarea>
+            </fieldset>
+
+            <fieldset class="fieldset-custom">
+                <legend>Experience</legend>
+                <label for="experience">Enter Experience:</label>
+                <textarea id="experience" name="experience" rows="3" required placeholder="Enter Your Work Experience"></textarea>
+            </fieldset>
+
+            <fieldset class="fieldset-custom">
+                <legend>Skills</legend>
+                <label for="skills">Enter Skills:</label>
+                <textarea id="skills" name="skills" rows="3" required placeholder="Enter Your Skills"></textarea>
+            </fieldset>
+
+            <fieldset class="fieldset-custom">
+                <legend>Projects</legend>
+                <label for="projects">Enter Projects:</label>
+                <textarea id="projects" name="projects" rows="3" required placeholder="Enter Your Projects"></textarea>
+            </fieldset>
+
+            <button type="button" id="generate-resume">Generate Resume</button>
+        </form>
+    </div>
+
+    <div id="resume-display" style="display: none;">
+        <img class="profile-img" src="" alt="Profile Image" id="profile-display">
+        <fieldset class="fieldset-custom">
+            <legend id="name-display">Rahim Ali</legend>
+            <p><strong>Email:</strong> <span id="email-display"></span></p>
+            <p><strong>Phone:</strong> <span id="phone-display"></span></p>
+            <p><strong>Location:</strong> <span id="location-display"></span></p>
+        </fieldset>
+
+        <fieldset class="fieldset-custom">
+            <legend>Education</legend>
+            <div id="education-display"></div>
+        </fieldset>
+
+        <fieldset class="fieldset-custom">
+            <legend>Experience</legend>
+            <div id="experience-display"></div>
+        </fieldset>
+
+        <fieldset class="fieldset-custom">
+            <legend>Skills</legend>
+            <div id="skills-display"></div>
+        </fieldset>
+
+        <fieldset class="fieldset-custom">
+            <legend>Projects</legend>
+            <div id="projects-display"></div>
+        </fieldset>
+    </div>
+
+    <footer id="contact">
+        <p>Contact me: <a id="contact-email" href="mailto:unknownvision90@gmail.com">unknownvision90@gmail.com</a></p>
+        <p>&copy; 2024 Dynamic Resume By <b class="my-name">Rahim Ali</b>. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
